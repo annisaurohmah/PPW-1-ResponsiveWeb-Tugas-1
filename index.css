@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(210, 46%, 95%);
+}
+.flexcontainer > * {
+    flex: 1 100%;
+}
+.flexcontainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.418);
+}
+aside #gambar  {
+    border-top-right-radius: 5%;
+    border: violet 2px solid;
+}
+.gambar{
+    display: flex;
+    justify-content: left;
+    padding: 0px;
+    height: 300px;
+    width: 80%;
+}
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 400px;
+    font-family: 'Manrope', sans-serif;
+    z-index: 0;
+}
+.info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-right: 20px;
+}
+.teks #utama {
+    font-weight: 700;
+    letter-spacing: 0.09rem;
+}
+.teks #deskripsi {
+    font-weight: 500;
+    font-size: 13px;
+}
+.info {
+    font-size: 13px;
+    line-height: 7px;
+    align-items: center;
+    margin: 20px 20px 20px 30px;
+}
+.info #nama {
+    font-weight: bold;
+    text-align: left;
+    margin-right: 60px;
+}
+img.pp {
+    border-radius: 50%;
+    height: 40px;
+    margin-right: 10px;
+    text-align: right;
+}
+@media all and (min-width: 300px) {
+    .aside { flex:  1 0 0;}
+    .flexcontainer{width: min-content;}
+    #kepala {border-top-left-radius: 10px;
+        border-top-right-radius: 10px}
+    .share .dropdown-content{
+        top:68.7%;
+        width: 320px;
+        height: 62px;
+        left: 0%;
+        border-top-right-radius: 0%;
+        border-top-left-radius: 0%;
+    }
+    .info .nama {
+        margin-right: 33px;        
+    }
+    .share .dropdown-content::after {
+        display: none;}
+    .share #bagi  path{
+        fill: white;
+    }
+    .share #bagi {
+        background-color: hsl(214, 17%, 51%);
+        border-radius: 50%;
+        cursor: pointer;
+        width: 28px;
+        height: 28px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .satu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .teks {
+        padding: 20px 20px 0px 30px
+    }
+    .gambar{
+        height: 280px;
+    }
+}
+@media all and (min-width: 800px) {
+    .gambar { order: 1;
+        height: 300px;}
+    .content { order: 2}
+    .flexcontainer {width: max-content;
+        position: absolute;
+        top: 25%;}
+    #kepala {border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0%;
+    } 
+    .share .dropdown-content{
+        top:55%;
+        width: 220px;
+        height: 30px;
+        left: 45%;
+        margin: 0px 0px;
+        padding: 12px 18px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    .share .dropdown-content::after {
+        display: block;
+    }
+    .share #bagi {
+        display: none;
+    }
+    .info .nama {
+        margin-right: 50px;        
+    }
+}
+.sharing a{
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.share{
+    float: left;
+    overflow: hidden;
+}
+.share .sharing {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    margin: 0;
+    background-color: hsl(210, 46%, 95%);
+    width: 28px;
+    height: 28px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.share:hover .sharing {
+    background-color: rgba(71, 70, 70, 0.603);
+}
+.share:hover .sharing path{
+    fill: rgb(255, 255, 255);
+}
+.dropdown-content {
+    display: none;
+    background-color: hsl(218, 16%, 33%);
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top:45%;
+    left: 48%;
+    position:absolute;
+    padding:15px;
+    color:white;
+    width:220px;
+    height: 30px;;
+    -webkit-border-radius:30px;
+    -moz-border-radius:20px;
+    border-radius:10px;
+}
+.dropdown-content::after{
+    content:"";
+    width:-px;
+    height:0px;
+    position:absolute;
+    top:100%;
+    left:50%;
+    border-width:10px;
+    border-style:solid;
+    border-color: hsl(218, 16%, 33%) transparent transparent transparent;
+    display:block;
+}
+.dropdown-content a {
+    color: rgb(194, 191, 191);
+    padding: 0px 0px;
+    margin: 5px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+.dropdown-content a:hover {
+    background-color: hsl(214, 17%, 51%);
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    align-items: center;
+    display: flex;
+}
+.share:hover .dropdown-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.2em;
+    color: white;
+}
