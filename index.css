@@ -1,13 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
-body {
-    display: flex;
+body {display: flex;
     justify-content: center;
     align-items: center;
-    background-color: hsl(210, 46%, 95%);
-}
-.flexcontainer > * {
-    flex: 1 100%;
-}
+    background-color: hsl(210, 46%, 95%);}
+.flexcontainer > * {flex: 1 100%;}
 .flexcontainer{
     display: flex;
     flex-direction: row;
@@ -15,18 +11,13 @@ body {
     justify-content: left;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.418);
-}
-aside #gambar  {
-    border-top-right-radius: 5%;
-    border: violet 2px solid;
-}
+    box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.418);}
 .gambar{
     display: flex;
     justify-content: left;
     padding: 0px;
     height: 300px;
-    width: 80%;
+    width: 60%;
 }
 .content {
     position: relative;
@@ -35,61 +26,52 @@ aside #gambar  {
     flex-wrap: wrap;
     max-width: 400px;
     font-family: 'Manrope', sans-serif;
-    z-index: 0;
-}
+    z-index: 0;}
 .info {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: left;
-    margin-right: 20px;
-}
+    margin-right: 20px;}
 .teks #utama {
     font-weight: 700;
-    letter-spacing: 0.09rem;
-}
+    letter-spacing: 0.09rem;}
 .teks #deskripsi {
     font-weight: 500;
     font-size: 13px;
-}
+    color: rgb(66, 66, 66);}
 .info {
     font-size: 13px;
     line-height: 7px;
     align-items: center;
     margin: 20px 20px 20px 30px;
-}
+    color: gray;}
 .info #nama {
     font-weight: bold;
     text-align: left;
     margin-right: 60px;
-}
+    color: black;}
 img.pp {
     border-radius: 50%;
     height: 40px;
     margin-right: 10px;
-    text-align: right;
-}
+    text-align: right;}
 @media all and (min-width: 300px) {
+    #kepala {border-top-left-radius: 10px;
+        border-top-right-radius: 10px}    
     .aside { flex:  1 0 0;}
     .flexcontainer{width: min-content;}
-    #kepala {border-top-left-radius: 10px;
-        border-top-right-radius: 10px}
     .share .dropdown-content{
         top:68.7%;
         width: 320px;
         height: 62px;
         left: 0%;
         border-top-right-radius: 0%;
-        border-top-left-radius: 0%;
-    }
-    .info .nama {
-        margin-right: 33px;        
-    }
-    .share .dropdown-content::after {
-        display: none;}
+        border-top-left-radius: 0%;}
+    .info .nama {margin-right: 33px;}
+    .share .dropdown-content::after {display: none;}
     .share #bagi  path{
-        fill: white;
-    }
+        fill: white;}
     .share #bagi {
         background-color: hsl(214, 17%, 51%);
         border-radius: 50%;
@@ -98,31 +80,25 @@ img.pp {
         height: 28px;
         justify-content: center;
         align-items: center;
-        display: flex;
-    }
+        display: flex;}
     .satu {
         display: flex;
         flex-direction: row;
-        align-items: center;
-    }
+        align-items: center;}
     .teks {
-        padding: 20px 20px 0px 30px
-    }
+        padding: 20px 20px 0px 30px}
     .gambar{
-        height: 280px;
-    }
-}
+        height: 280px;}}
 @media all and (min-width: 800px) {
+    #kepala {border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0%;}
     .gambar { order: 1;
-        height: 300px;}
+            height: 300px;}
     .content { order: 2}
     .flexcontainer {width: max-content;
         position: absolute;
-        top: 25%;}
-    #kepala {border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-        border-top-right-radius: 0%;
-    } 
+        top: 25%;} 
     .share .dropdown-content{
         top:55%;
         width: 220px;
@@ -131,17 +107,10 @@ img.pp {
         margin: 0px 0px;
         padding: 12px 18px;
         border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-    }
-    .share .dropdown-content::after {
-        display: block;
-    }
-    .share #bagi {
-        display: none;
-    }
-    .info .nama {
-        margin-right: 50px;        
-    }
+        border-top-left-radius: 10px;}
+    .share .dropdown-content::after {display: block;}
+    .share #bagi {display: none;}
+    .info .nama {margin-right: 50px;}
 }
 .sharing a{
     float: left;
@@ -149,12 +118,10 @@ img.pp {
     color: white;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
-}
+    text-decoration: none;}
 .share{
     float: left;
-    overflow: hidden;
-}
+    overflow: hidden;}
 .share .sharing {
     font-size: 16px;
     border: none;
@@ -167,14 +134,11 @@ img.pp {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    cursor: pointer;
-}
+    cursor: pointer;}
 .share:hover .sharing {
-    background-color: rgba(71, 70, 70, 0.603);
-}
+    background-color: rgba(71, 70, 70, 0.603);}
 .share:hover .sharing path{
-    fill: rgb(255, 255, 255);
-}
+    fill: rgb(255, 255, 255);}
 .dropdown-content {
     display: none;
     background-color: hsl(218, 16%, 33%);
@@ -190,8 +154,7 @@ img.pp {
     height: 30px;;
     -webkit-border-radius:30px;
     -moz-border-radius:20px;
-    border-radius:10px;
-}
+    border-radius:10px;}
 .dropdown-content::after{
     content:"";
     width:-px;
@@ -202,28 +165,24 @@ img.pp {
     border-width:10px;
     border-style:solid;
     border-color: hsl(218, 16%, 33%) transparent transparent transparent;
-    display:block;
-}
+    display:block;}
 .dropdown-content a {
     color: rgb(194, 191, 191);
     padding: 0px 0px;
     margin: 5px 16px;
     text-decoration: none;
     display: block;
-    text-align: center;
-}
+    text-align: center;}
 .dropdown-content a:hover {
     background-color: hsl(214, 17%, 51%);
     cursor: pointer;
     width: auto;
     height: auto;
     align-items: center;
-    display: flex;
-}
+    display: flex;}
 .share:hover .dropdown-content {
     display: flex;
     justify-content: center;
     align-items: center;
     letter-spacing: 0.2em;
-    color: white;
-}
+    color: white;}
